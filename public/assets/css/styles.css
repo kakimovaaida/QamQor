@@ -1,0 +1,231 @@
+.card-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.faq-container {
+     max-width: 100%;
+     color: #FFFFE0;
+     margin: 0 auto;
+     padding: 20px;
+    background-color: #0f5645;
+    border-radius: 1.5rem;
+ }
+.faq-item {
+    margin-bottom: 20px;
+}
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+.faq-answer {
+    display: none;
+    padding-left: 12px;
+}
+#map {
+    height: 500px;
+    width: 100%;
+}
+/* Основной контейнер секции */
+.profile-section {
+    background-color: #f8f9fa;
+}
+
+/* Контейнер карточки */
+.card {
+    border: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Картинка профиля */
+.img-fluid {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Заголовок */
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+/* Текст под заголовком */
+.text-muted {
+    color: #6c757d;
+}
+
+/* Горизонтальная линия */
+.hr {
+    margin: 20px 0;
+    border-color: #ddd;
+}
+
+/* Форма */
+form {
+    margin-top: 20px;
+}
+
+/* Инпуты в форме */
+.form-control {
+    margin-bottom: 15px;
+}
+
+/* Кнопка */
+.btn-success {
+    margin-top: 20px;
+}
+
+.jumbotron-fluid {
+    border: 1px solid #0f5645;
+    border-radius: 20px;
+}
+container-d{
+    display: flex;
+    margin: auto
+}
+.gfg {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 600;
+    color: #01940b;
+    align-items: center;
+}
+
+.video-container {
+    max-width: 500px;
+    border: 10px solid #ffb080;
+    max-height: 500px;
+    position: relative;
+    margin: 0 auto;
+    background-color: black;
+}
+
+#video-thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#video,
+.sss {
+    width: 100%;
+    height: 480px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.7
+    );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.controls button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.left {
+    position: relative;
+    top: 1%;
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-timer {
+    position: relative;
+    top: 5.2px;
+    right: 6px;
+    display: flex;
+    flex-direction: row;
+    color: #efefef;
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+#separator {
+    margin: 0 5px;
+    font-size: 16px;
+    font-family: "Open sans";
+}
+
+.right {
+    position: relative;
+    padding: 10px;
+    top: 1.5px;
+}
+
+.fa-volume-up,
+.fa-solid {
+    font-size: small;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+}
+
+button,
+input {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+}
+
+#volume {
+    position: relative;
+    left: 5px;
+    width: 50px;
+    height: 3px;
+}
+
+#mute {
+    cursor: pointer;
+}
+
+.playback-line {
+    position: relative;
+    top: 2.7px;
+    height: 4px;
+    background-color: #ddd;
+    width: 40%;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #0078d4;
+    transition: width 0.1s linear
+}
