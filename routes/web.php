@@ -16,13 +16,24 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::resource('services',ServiceController::class);
+
+
+
+
+
 Route::get('/search', [SearchController::class, 'search'])->name('search');
+
+
+
+
+
+
+Route::get('/mobile', [ServiceController::class, 'mobileApp'])->name('mobile.page');
 Route::get('/bankFund',[ServiceController::class, 'bankFund'])->name('sd.bankFund');
 Route::get('/wantHelp',[ServiceController::class, 'wantHelp'])->name('want.Help');
 Route::get('/wantToHelp',[ServiceController::class, 'wantToHelp'])->name('want.toHelp.php');
 Route::get('/about',[ServiceController::class, 'about_us'])->name('about');
-Route::get('/services/category/{category}',[ServiceController::class, 'ServicesByCat'])->name('services.category');
-Route::get('/categories/type/{type}',[ServiceController::class, 'CatsByType'])->name('services.type');
+Route::get('/services/type/{type}',[ServiceController::class, 'ServicesByType'])->name('services.type');
 Route::get('/types/typeCat/{typeCat}',[ServiceController::class, 'TypesByTypeCat'])->name('services.typeCat');
 Route::post('/help/message',[ServiceController::class,'help_requests'])->name('help.requests');
 Route::post('/join/team',[ServiceController::class,'employee'])->name('employee.requests');

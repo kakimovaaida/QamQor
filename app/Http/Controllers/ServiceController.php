@@ -21,9 +21,9 @@ class ServiceController extends Controller
         return view('services.index',['services'=>$allService, 'randomServices' => $randomServices,'categories'=>Category::all(),'typeCats' => TypeCat::all(),'types' => Type::all()],);
     }
 
-    public function ServicesByCat(Category $category)
+    public function ServicesByType(Type $type)
     {
-        return view('catPages.test',['services'=>$category->services,'types' =>TypeCat::all(),'categories'=>Category::all()]);
+        return view('catPages.test',['services'=>$type->services,'typeCats' =>TypeCat::all(), 'types'=>Type::all()]);
     }
 
     public function CatsByType(Type $type)
@@ -33,7 +33,10 @@ class ServiceController extends Controller
 
     public function TypesByTypeCat(TypeCat $typeCat)
     {
-        return view('catPages.third',['types'=>$typeCat->types,'typeCats'=>TypeCat::all()]);
+        $firstRange = Type::whereBetween('id', [150, 169])->get();
+        $secondRange = Type::whereBetween('id', [170, 189])->get();
+        $thirdRange = Type::whereBetween('id', [190, 209])->get();
+        return view('catPages.third',['types'=>$typeCat->types,'typeCats'=>TypeCat::all(),'kids'=>$firstRange, 'study'=>$secondRange,'medicine' => $thirdRange]);
     }
 
     public function create()
@@ -125,6 +128,11 @@ class ServiceController extends Controller
     public function wantToHelp()
     {
         return view('help.want_to_help');
+    }
+
+    public function mobileApp()
+    {
+        return view('services.mobile');
     }
 }
 

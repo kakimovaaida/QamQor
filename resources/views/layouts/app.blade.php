@@ -31,7 +31,7 @@
     <div id="app" style="width: 100%">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color:#DEB887; height: 150px ">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" style="color: #0f5645">
+                <a class="navbar-brand" href="{{ url('/') }}" style="color: #0f5645;margin-right: 80px">
                     <img style="width: 120px; height: 100px" src="{{asset('assets/img/logo.png')}}" alt="">  <h2><span class="Qtext">Q</span>amqor</h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -50,7 +50,7 @@
                             <li><a class="nav-link scrollto " style="color: #0f5645; font-size: 20px;" href="{{route('want.Help')}}">{{__('navbar.help')}}</a></li>
                             <li><a class="nav-link scrollto " style="color: #0f5645; font-size: 20px;" href="{{route('want.toHelp.php')}}">{{__('navbar.toHelp.php')}}</a></li>
                             <li><a class="nav-link scrollto " style="color: #0f5645; font-size: 20px;" href="{{route('about')}}">{{__('navbar.about')}}</a></li>
-                            <li><a class="nav-link scrollto" style="color: #0f5645; font-size: 20px;" href="{{url('/')}}">{{__('navbar.home')}}</a></li>
+                            <li><a class="nav-link scrollto" style="color: #0f5645; font-size: 20px;" href="{{route('mobile.page')}}">{{__('navbar.mobile')}}</a></li>
 
                                     <!-- Authentication Links -->
                             @guest
@@ -134,7 +134,7 @@
     </div>
     <footer class="py-3 my-4 " style="background-color: #13866e;" >
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 " style=" font-weight:bold; color: white ">{{__('navbar.home')}}</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 " style=" font-weight:bold; color: white ">{{__('navbar.mobile')}}</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 " style="font-weight:bold; color: white">{{__('navbar.about')}}</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 " style="font-weight:bold; color: white">{{__('navbar.toHelp.php')}}</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 " style="font-weight:bold; color: white">{{__('navbar.help')}}</a></li>

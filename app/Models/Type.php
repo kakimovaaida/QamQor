@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Type extends Model
 {
     use HasFactory;
-    protected $fillable=['Name'];
+    protected $fillable=['name'];
 
 
-    public function categories()
+    public function services()
     {
-        return $this ->hasMany(Category::class);
+        return $this->hasMany(Service::class);
     }
 
     public function helper()

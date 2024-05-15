@@ -9,11 +9,11 @@ class Service extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['service_name','description','help_title','category_id'];
+    protected $fillable = ['service_name','service_name_ru','description', 'description_ru','type_id'];
 
-    public function category()
+    public function type()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Type::class);
     }
 
     public function user()

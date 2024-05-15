@@ -624,6 +624,7 @@ section {
   transition: 0.3s;
     border-radius: 10px;
     height: 100%;
+
 }
 
 .values .box img {
@@ -2470,4 +2471,5 @@ section {
 }
 .search-form {
     margin-left: 50px;
+
 }

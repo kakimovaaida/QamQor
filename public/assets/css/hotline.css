@@ -154,7 +154,7 @@
 .contact-box {
     background-color: #ffffff;
     border: 1px solid #e7eaec;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 20px;
     height: 100px;
 }
@@ -168,12 +168,12 @@
 .contact-box.center-version > a {
     display: block;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
 }
 .contact-box.center-version > a img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 180px;
     margin-top: 10px;
     margin-bottom: 10px;
 }

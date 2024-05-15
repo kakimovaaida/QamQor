@@ -133,15 +133,16 @@
                     <br> <p align="right">{{__('messages.banner_author')}}</p></h2>
                 <div data-aos="fade-up" data-aos-delay="600">
                 </div>
+                <br><br><br>
+                <form action="{{ route('search') }}" method="GET" class="search-form">
+                    <input type="text" name="query" placeholder="{{__('messages.search_placeholder')}}" required>
+                    <button type="submit">{{__('messages.search')}}</button>
+                </form>
             </div>
 
             <div class="col-lg-6 hero-img"  data-aos="zoom-out" data-aos-delay="200">
                 <img src="{{asset('assets/img/baass.jpg')}}"  alt="" height="400" width="800">
             </div>
-            <form action="{{ route('search') }}" method="GET" class="search-form">
-                <input type="text" name="query" placeholder="{{__('messages.search_placeholder')}}" required>
-                <button type="submit">{{__('messages.search')}}</button>
-            </form>
         </div>
     </div>
         <!-- ======= Values Section ======= -->
@@ -158,7 +159,7 @@
                     @foreach($typeCats as $t)
                         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="box" style="background-color: #0f5645;" >
-                                <a href="{{route('services.typeCat',$t->id)}}" style="text-decoration: none;"><h3>{{$t->name}}</h3></a><br>
+                                <a href="{{route('services.typeCat',$t->id)}}" style="text-decoration: none;"><h3>{{app()->isLocale('kz') ? $t->name: $t->name_ru}}</h3></a><br>
                             </div>
                         </div>
                     @endforeach
@@ -232,7 +233,7 @@
                         <a href="{{route('services.show',$service->id)}}">
                         <div class="card">
                             <div class="card__body">
-                                <span class="tag tag-blue">{{$service->category->type->name}}</span>
+                                <span class="tag tag-blue">{{$service->type->name}}</span>
                                 <h4>{{$service->service_name}}</h4>
                                 <p>{{\Illuminate\Support\Str::words($service->description, 10, '...') }}</p>
                             </div>

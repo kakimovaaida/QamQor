@@ -30,18 +30,18 @@ class ServicePolicy
 
     public function delete(User $user, Service $service): bool
     {
-        return  ($user->role->name != 'teacher');
+        return  ($user->role->name != 'user');
     }
 
     public function restore(User $user, Course $course): bool
     {
-        return  ($user->role->name != 'teacher');
+        return  ($user->role->name != 'user');
     }
 
 
     public function forceDelete(User $user, Course $course): bool
     {
-        return  ($user->role->name != 'teacher');
+        return  ($user->role->name != 'user');
     }
 
 }
